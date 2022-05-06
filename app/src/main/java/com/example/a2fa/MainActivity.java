@@ -240,7 +240,6 @@ public class MainActivity extends AppCompatActivity implements dialogadd.DialogL
                 e.printStackTrace();
             }
         }
-        Log.wtf("lohas", content);
         return content;
     }
 
@@ -273,11 +272,9 @@ public class MainActivity extends AppCompatActivity implements dialogadd.DialogL
     }
     @Override
     public void applyTexts(String totp1, String issuer) {
-        Log.wtf("wtf", totp1 + issuer);
         if (totp1.matches("\\w{3}-\\w{3}-\\w{3}-\\w{3}-\\w{3}-\\w{3}")) {
             elementas badd = new elementas(totp1, issuer, MainActivity.this);
             elementasList.add(badd);
-
             isaugotiDuomenis(gautiduomenis(),totp1,issuer);
             gautiduomenis();
             setupList();
